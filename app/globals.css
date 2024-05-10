@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -18,16 +18,135 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #0f1120;
+  font-family: var(--body-font), sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-family: var(--body-font), sans-serif;
+  font-size: 2em;
+  color: rgb(var(--foreground-rgb));
+}
+
+h3 {
+  font-family: var(--body-font), sans-serif;
+  font-size: 1.6em;
+  color: rgb(var(--foreground-rgb));
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.5em;
+  font-size: 1em;
+  font-family: var(--body-font), sans-serif;
+}
+
+.nav {
+  padding: 2em;
+  width: 100%;
+}
+
+.nav-link {
+  font-family: var(--body-font), sans-serif;
+  font-size: 1em;
+}
+
+.about {
+  width: 100%;
+}
+
+.about-team {
+  font-family: var(--body-font), sans-serif;
+  font-size: 2.1em;
+  letter-spacing: -0.01em;
+  width: 100% !important;
+}
+
+.emphasise-text {
+  background-color: rgb(136, 155, 167);
+  padding: 0px 4px;
+  border-radius: 3px;
+}
+
+.card-divider {
+  color: #44496a;
+  opacity: 0.5;
+}
+
+.skill-card {
+  background: rgb(21, 27, 50);
+  padding: 1.5em;
+  border-radius: 12px;
+  border: 3px solid #44496a;
+  filter: drop-shadow(3px 3px 15px #262745);
+}
+
+.card-body {
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+
+.contact-button {
+  background: rgb(30, 39, 75);
+  filter: drop-shadow(3px 3px 15px #262745);
+  padding: 0.5em 2em;
+  border-radius: 8px;
+  border: 2px solid #44496a;
+}
+
+.header-image {
+  width: 100vw;
+  height: 78vh;
+  background-image: url("../public/header.jpg");
+  background-size: cover;
+  margin-bottom: 1em;
+}
+
+.logo-image {
+  width: 15%;
+  height: 80px;
+  object-fit: cover;
+  margin-left: 1em;
+  padding-top: 1em;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header-image {
+    height: 30vh;
+  }
+
+  .about {
+    height: 70vh;
+    margin-bottom: 0px;
+  }
+
+  .about-team {
+    font-size: 1.9em;
+  }
+  .section-cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0px !important;
+  }
+
+  .skill-card {
+    margin: 0px;
+    margin-bottom: 2em;
+    filter: drop-shadow(3px 3px 8px #262745);
+  }
+
+  .footer {
+    margin-bottom: 6em;
   }
 }
