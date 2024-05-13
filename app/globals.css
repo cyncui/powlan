@@ -26,13 +26,13 @@ body {
 h1 {
   font-family: var(--body-font), sans-serif;
   font-size: 2em;
-  color: rgb(var(--foreground-rgb));
+  color: #ffffff;
 }
 
 h3 {
   font-family: var(--body-font), sans-serif;
   font-size: 1.6em;
-  color: rgb(var(--foreground-rgb));
+  color: #ffffff;
 }
 
 h4 {
